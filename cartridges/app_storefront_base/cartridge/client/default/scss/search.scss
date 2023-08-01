@@ -34,8 +34,8 @@
 }
 
 .filter-header {
-    margin-left: $grid-gutter-width / 2 * -1;
-    margin-right: $grid-gutter-width / 2 * -1;
+    margin-left: calc($grid-gutter-width / 2 * -1);
+    margin-right: calc($grid-gutter-width / 2 * -1);
 }
 
 .header-bar {
@@ -86,7 +86,7 @@
 
             button {
                 border: none;
-                color: $blue;
+                color: #{var(--skin-link-color-1)};
                 background-color: transparent;
             }
         }
@@ -226,7 +226,7 @@
 
 .filter-bar {
     ul {
-        padding-left: $grid-gutter-width / 2;
+        padding-left: calc($grid-gutter-width / 2);
     }
 
     li {

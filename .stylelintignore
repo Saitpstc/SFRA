@@ -1,0 +1,7 @@
+cartridges/app_storefront_base/cartridge/static/
+cartridges/lib_productlist
+cartridges/plugin_wishlists
+cartridges/plugin_applepay
+cartridges/plugin_cartridge_merge
+doc/
+build

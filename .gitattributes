@@ -1,0 +1,9 @@
+sites/**/*.png filter=lfs diff=lfs merge=lfs -text
+sites/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+sites/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+sites/**/*.gif filter=lfs diff=lfs merge=lfs -text
+sites/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
+sites/**/*.ogg filter=lfs diff=lfs merge=lfs -text
+sites/**/*.mov filter=lfs diff=lfs merge=lfs -text
+sites/**/*.pdf filter=lfs diff=lfs merge=lfs -text
+-*.xml filter=lfs diff=lfs merge=lfs -text

@@ -11,10 +11,8 @@ var productHelper = require('*/cartridge/scripts/helpers/productHelpers');
 var arrayHelper = require('*/cartridge/scripts/util/array');
 var BONUS_PRODUCTS_PAGE_SIZE = 6;
 
-
 /**
  * Replaces Bundle master product items with their selected variants
- *
  *
  * @param {dw.order.ProductLineItem} apiLineItem - Cart line item containing Bundle
  * @param {string[]} childProducts - List of bundle product item ID's with chosen product variant

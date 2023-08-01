@@ -1,0 +1,24 @@
+{
+    "hostname": "",
+    "username": "",
+    "password": "",
+    "storefrontUsername": "storefront",
+    "storefrontPassword": "",
+    "exclude": [
+        "**/client/**",
+        "node_modules",
+        "**.map"
+    ],
+    "cartridge": [
+        "app_storefront_base",
+        "bm_app_storefront_base",
+        "lib_productlist",
+        "modules",
+        "int_payfort",
+        "plugin_applepay",
+        "plugin_cartridge_merge",
+        "plugin_sitemap",
+        "plugin_wishlists"
+    ],
+    "code-version": ""
+}

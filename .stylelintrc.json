@@ -4,7 +4,7 @@
         "stylelint-scss"
     ],
     "rules": {
-        "at-rule-no-unknown": [true, { "ignoreAtRules": ["include", "each", "mixin", "if", "else", "content"] } ],
+        "at-rule-no-unknown": [true, { "ignoreAtRules": ["include", "each", "while", "mixin", "extend", "if", "else", "content", "function", "return", "for", "at-root"] } ],
         "indentation": 4,
         "scss/at-import-no-partial-leading-underscore": true,
         "scss/at-import-partial-extension-blacklist": ["scss"],

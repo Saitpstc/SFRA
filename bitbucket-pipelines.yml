@@ -3,18 +3,48 @@
 # Only use spaces to indent your .yml configuration.
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
-image: node:6.9.2
 
+image: node:14.19.0
+
+clone:
+  lfs: true
 pipelines:
-  default:
-    - step:
-        script: # Modify the commands below to build your repository.
-          - npm install
-          - npm run lint
-          - npm test
-          - npm run compile:js
-          - npm run compile:scss
-          - npm run compile:fonts
-          - node node_modules/.bin/dwupload --hostname ${HOSTNAME} --username ${USERNAME} --password "${PASSWORD}" --cartridge cartridges/app_storefront_base
-          - node node_modules/.bin/dwupload --hostname ${HOSTNAME} --username ${USERNAME} --password "${PASSWORD}" --cartridge cartridges/modules
-          - npm run test:integration -- --baseUrl https://${HOSTNAME}/on/demandware.store/Sites-MobileFirst-Site/en_US "test/integration/*"
+  pull-requests:
+    '**':
+      - step:
+          caches:
+            - node
+          script:
+            - npm install
+            - npm run lint
+            - npm run test
+            - npm run webpack:dev
+  custom:
+    Development Flow:
+     - variables:
+        - name: CODE_VERSION
+     - step:
+        name: Build & Deploy & Activate to Development
+        deployment: Development
+        caches:
+            - node
+        script:
+            - cd build
+            - npm install
+            - ./node_modules/.bin/grunt build --target=$TARGET
+            - ./node_modules/.bin/grunt importSite --target=$TARGET
+            - ./node_modules/.bin/grunt upload --target=$TARGET
+            - ./node_modules/.bin/grunt activate --target=$TARGET
+    Staging Flow:
+      - variables:
+        - name: CODE_VERSION
+      - step:
+          name: Build & Deploy & Activate to Staging
+          deployment: Staging
+          caches:
+              - node
+          script:
+              - cd build
+              - npm install
+              - ./node_modules/.bin/grunt build --target=$TARGET
+              - ./node_modules/.bin/grunt upload --target=$TARGET
