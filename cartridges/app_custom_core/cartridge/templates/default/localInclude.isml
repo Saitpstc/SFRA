@@ -1,0 +1,53 @@
+<!--- TEMPLATENAME: localInclude.isml --->
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .card {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+        background-color: #3498db;
+        color: #ffffff;
+        font-weight: bold;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .card-title {
+        font-size: 24px;
+        color: #333333;
+    }
+
+    .card-text {
+        font-size: 18px;
+        color: #666666;
+        line-height: 1.6;
+    }
+</style>
+
+<body>
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            Personal Details
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">${pdict.name;}</h5>
+            <p class="card-text">
+                <strong>Email:</strong> ${pdict.email;}<br>
+                <strong>Phone:</strong> ${pdict.mobile;}<br>
+                <strong>Address:</strong> 123 Main St, Cityville, Country<br>
+                <strong>append1:</strong> ${pdict.rest}<br>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Link to Bootstrap JS and jQuery -->
+</body>

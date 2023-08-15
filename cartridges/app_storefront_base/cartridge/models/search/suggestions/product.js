@@ -17,6 +17,8 @@ function getImageUrl(product) {
     if (product.master) {
         imageProduct = product.variationModel.defaultVariant;
     }
+
+    var test=imageProduct.getImage(IMAGE_SIZE).URL.toString();
     return imageProduct.getImage(IMAGE_SIZE).URL.toString();
 }
 
@@ -42,6 +44,8 @@ function getProducts(suggestedProducts, maxItems) {
             });
         }
     }
+
+    var pro=products;
 
     return products;
 }

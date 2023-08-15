@@ -9,31 +9,7 @@
         <h1 class="page-title">${Resource.msg('title.contact.us.page', 'contactUs', null);}</h1>
     </div>
 
-    <div class="container contact-us-landing-page">
-        <div class="row justify-content-center">
-            <div class="col-sm-8 col-md-6">
-                <div class="card">
-                    <div class="card-body">
 
+    <isinclude template="localInclude"/>
 
-                        <div class="messenger">
-                            <div class="message">
-                                <div class="sender">John Doe</div>
-                                <div class="text">${pdict.message;}</div>
-                                <div class="timestamp">3 minutes ago</div>
-                            </div>
-                            <div class="message">
-                                <div class="sender">Jane Smith</div>
-                                <div class="text">Hi John, I'm doing well, thank you!</div>
-                                <div class="timestamp">1 minute ago</div>
-                            </div>
-                            <!-- Add more messages here if needed -->
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </isdecorate>
